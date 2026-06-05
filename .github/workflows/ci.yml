@@ -45,7 +45,7 @@ jobs:
       - name: Patch image tag in deployment
         run: |
           cd gitops
-          sed -i "s|image: ghcr.io/.*/my-react-app:.*|image: ghcr.io/${{ github.repository_owner }}/demo:${{ github.sha }}|" k8s/deployment.yaml
+          sed -i "s|image: ghcr.io/.*/demo:.*|image: ghcr.io/${{ github.repository_owner }}/demo:${{ github.sha }}|" k8s/deployment.yaml
           git config user.email "ci@github.com"
           git config user.name "GitHub Actions"
           git add k8s/deployment.yaml
