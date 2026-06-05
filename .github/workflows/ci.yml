@@ -38,7 +38,7 @@ jobs:
       - name: Update GitOps repo image tag
         uses: actions/checkout@v4
         with:
-          repository: <YOUR_GITHUB_USERNAME>/my-react-gitops  # ← your gitops repo
+          repository: jainnpiy/cloud_apps  # ← your gitops repo
           token: ${{ secrets.GITOPS_PAT }}                    # ← PAT secret
           path: gitops
 
